@@ -1,6 +1,6 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import desertAbstract from "@/assets/desert-abstract.jpg";
+import lifestyleSabah from "@/assets/lifestyle-sabah.jpg";
 
 const SanctuarySection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
