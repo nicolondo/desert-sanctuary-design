@@ -1,96 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* MATAI Design System - Desert Sanctuary */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Core palette - Deep charcoal and warm sand */
+    --background: 220 10% 6%;
+    --foreground: 35 20% 85%;
+    
+    /* Card surfaces */
+    --card: 220 10% 8%;
+    --card-foreground: 35 20% 85%;
+    
+    /* Popover */
+    --popover: 220 10% 8%;
+    --popover-foreground: 35 20% 85%;
+    
+    /* Primary - Warm sand (brighter) */
+    --primary: 35 35% 78%;
+    --primary-foreground: 220 10% 6%;
+    
+    /* Secondary - Muted charcoal */
+    --secondary: 220 8% 12%;
+    --secondary-foreground: 35 20% 75%;
+    
+    /* Muted */
+    --muted: 220 8% 15%;
+    --muted-foreground: 35 15% 55%;
+    
+    /* Accent - Amber gold */
+    --accent: 38 50% 45%;
+    --accent-foreground: 35 30% 95%;
+    
+    /* Destructive */
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders */
+    --border: 35 15% 20%;
+    --input: 35 15% 20%;
+    --ring: 38 50% 45%;
+    
+    --radius: 0rem;
+    
+    /* Custom MATAI tokens */
+    --sand: 35 30% 70%;
+    --sand-light: 35 25% 80%;
+    --sand-dark: 35 25% 55%;
+    --amber: 38 50% 45%;
+    --amber-glow: 38 60% 55%;
+    --charcoal: 220 10% 10%;
+    --charcoal-deep: 220 12% 5%;
+    --gold: 45 70% 50%;
+    --gold-muted: 45 40% 40%;
+    
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 220 10% 6%;
+    --sidebar-foreground: 35 20% 85%;
+    --sidebar-primary: 38 50% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 8% 12%;
+    --sidebar-accent-foreground: 35 20% 85%;
+    --sidebar-border: 35 15% 15%;
+    --sidebar-ring: 38 50% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 10% 6%;
+    --foreground: 35 20% 85%;
+    --card: 220 10% 8%;
+    --card-foreground: 35 20% 85%;
+    --popover: 220 10% 8%;
+    --popover-foreground: 35 20% 85%;
+    --primary: 35 30% 70%;
+    --primary-foreground: 220 10% 6%;
+    --secondary: 220 8% 12%;
+    --secondary-foreground: 35 20% 75%;
+    --muted: 220 8% 15%;
+    --muted-foreground: 35 15% 55%;
+    --accent: 38 50% 45%;
+    --accent-foreground: 35 30% 95%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 15% 20%;
+    --input: 35 15% 20%;
+    --ring: 38 50% 45%;
   }
 }
 
@@ -99,7 +97,216 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  ::selection {
+    background-color: hsl(var(--amber) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Ceremonial navigation link */
+  .nav-link {
+    @apply relative text-sm uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-500;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-primary transition-all duration-500;
+  }
+  
+  .nav-link:hover {
+    @apply text-primary;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Floating typography */
+  .text-float {
+    @apply opacity-0;
+    animation: textFloat 1.2s ease-out forwards;
+  }
+
+  /* Poetic text styling */
+  .text-poetic {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    @apply uppercase text-primary;
+  }
+
+  /* Subtle divider */
+  .divider-line {
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-amber to-transparent;
+  }
+
+  /* Fragrance card */
+  .fragrance-card {
+    @apply relative overflow-hidden bg-card transition-all duration-700;
+  }
+
+  .fragrance-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-charcoal-deep/80 to-transparent opacity-0 transition-opacity duration-500;
+  }
+
+  .fragrance-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    @apply opacity-60;
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Custom gradients */
+  .gradient-sand {
+    background: linear-gradient(135deg, hsl(var(--sand)) 0%, hsl(var(--amber)) 100%);
+  }
+
+  .gradient-night {
+    background: linear-gradient(180deg, hsl(var(--charcoal-deep)) 0%, hsl(var(--charcoal)) 50%, hsl(var(--background)) 100%);
+  }
+
+  .gradient-reveal {
+    background: linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%);
+  }
+
+  /* Text gradients */
+  .text-gradient-sand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--sand-light)) 0%, hsl(var(--amber)) 100%);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-muted)) 100%);
+  }
+
+  /* Subtle glow effects */
+  .glow-amber {
+    box-shadow: 0 0 60px -15px hsl(var(--amber) / 0.3);
+  }
+
+  .glow-gold {
+    text-shadow: 0 0 40px hsl(var(--gold) / 0.4);
+  }
+
+  /* Parallax helpers */
+  .parallax-slow {
+    transform: translateY(calc(var(--scroll-y, 0) * 0.3));
+  }
+
+  .parallax-medium {
+    transform: translateY(calc(var(--scroll-y, 0) * 0.5));
+  }
+}
+
+/* Keyframes */
+@keyframes textFloat {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes windDrift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(10px) translateY(-5px);
+  }
+  66% {
+    transform: translateX(-5px) translateY(5px);
+  }
+}
+
+/* Smooth scroll sections */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--charcoal-deep));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--sand-dark) / 0.3);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--sand-dark) / 0.5);
 }
