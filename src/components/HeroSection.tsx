@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroDesert from "@/assets/hero-desert.jpg";
 
 const HeroSection = () => {
+  const heroImage = "/ADHARA (Large).png";
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -25,7 +25,7 @@ const HeroSection = () => {
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroDesert})` }}
+          style={{ backgroundImage: `url(${heroImage})` }}
         />
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-deep/60 via-transparent to-background" />
