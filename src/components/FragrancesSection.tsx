@@ -1,71 +1,79 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import FragranceCard from "./FragranceCard";
-import fragranceSahara from "@/assets/fragrance-sahara-detail.jpg";
-import fragranceLunar from "@/assets/fragrance-lunar.jpg";
-import fragranceNasim from "@/assets/fragrance-nasim.jpg";
-import fragranceAdhara from "@/assets/fragrance-adhara.jpg";
-import fragranceKaif from "@/assets/fragrance-kaif.jpg";
-import fragranceNoor from "@/assets/fragrance-noor.jpg";
-import fragranceSabah from "@/assets/fragrance-sabah.jpg";
-import fragranceAura from "@/assets/fragrance-aura.jpg";
+
+// Clean bottle product shots
+import bottleLunar from "@/assets/bottles/lunar.png";
+import bottleNasim from "@/assets/bottles/nasim.png";
+import bottleAdhara from "@/assets/bottles/adhara.png";
+import bottleKaif from "@/assets/bottles/kaif.png";
+import bottleNoor from "@/assets/bottles/noor.png";
+import bottleSabah from "@/assets/bottles/sabah.png";
+import bottleAura from "@/assets/bottles/aura.png";
+import bottleCeleste from "@/assets/bottles/celeste.png";
+import bottleMirza from "@/assets/bottles/mirza.png";
+import bottleOryx from "@/assets/bottles/oryx.png";
 
 const fragrances = [
   {
-    image: fragranceSahara,
-    name: "Sahara",
-    family: "Oriental Amaderado",
-    notes: ["Orquídea", "Madera", "Ámbar Dorado"],
-    volume: "Volumen I",
-  },
-  {
-    image: fragranceLunar,
+    image: bottleLunar,
     name: "Lunar",
-    family: "Terroso Mineral",
-    notes: ["Piedra Volcánica", "Vetiver", "Cuero"],
-    volume: "Volumen II",
+    family: "Nocturno Profundo",
+    notes: ["Oud Negro", "Cuero", "Vetiver"],
   },
   {
-    image: fragranceNasim,
+    image: bottleNasim,
     name: "Nasim",
-    family: "Oriental Especiado",
-    notes: ["Sándalo", "Madera Antigua", "Ámbar"],
-    volume: "Volumen III",
+    family: "Oriental Dorado",
+    notes: ["Sándalo", "Ámbar", "Madera Antigua"],
   },
   {
-    image: fragranceAdhara,
+    image: bottleAdhara,
     name: "Adhara",
     family: "Mineral Equilibrado",
-    notes: ["Roca Negra", "Incienso", "Cedro"],
-    volume: "Volumen IV",
+    notes: ["Roca", "Incienso", "Cedro"],
   },
   {
-    image: fragranceKaif,
+    image: bottleKaif,
     name: "Kaif",
     family: "Cálido Intenso",
     notes: ["Azafrán", "Rosa Roja", "Oud"],
-    volume: "Volumen V",
   },
   {
-    image: fragranceNoor,
+    image: bottleNoor,
     name: "Noor",
     family: "Luminoso Vibrante",
     notes: ["Limón", "Jazmín", "Almizcle"],
-    volume: "Volumen VI",
   },
   {
-    image: fragranceSabah,
+    image: bottleSabah,
     name: "Sabah",
-    family: "Amanecer Suave",
-    notes: ["Arena", "Flor Blanca", "Vainilla"],
-    volume: "Volumen VII",
+    family: "Amanecer Puro",
+    notes: ["Flor Blanca", "Algodón", "Vainilla"],
   },
   {
-    image: fragranceAura,
+    image: bottleAura,
     name: "Aura",
     family: "Dulce Etéreo",
     notes: ["Rosa", "Bergamota", "Musk"],
-    volume: "Volumen VIII",
+  },
+  {
+    image: bottleCeleste,
+    name: "Celeste",
+    family: "Fresco Acuático",
+    notes: ["Ozono", "Menta", "Té Verde"],
+  },
+  {
+    image: bottleMirza,
+    name: "Mirza",
+    family: "Especiado Cálido",
+    notes: ["Canela", "Cardamomo", "Ámbar"],
+  },
+  {
+    image: bottleOryx,
+    name: "Oryx",
+    family: "Amaderado Noble",
+    notes: ["Cuero", "Tabaco", "Sándalo"],
   },
 ];
 
@@ -91,7 +99,7 @@ const FragrancesSection = () => {
             Las Fragancias
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.1em] text-primary mb-8">
-            Ocho Volúmenes
+            La Colección
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Cada fragancia es un artefacto. Una pieza aislada del tiempo, 
@@ -99,13 +107,13 @@ const FragrancesSection = () => {
           </p>
         </motion.div>
 
-        {/* Fragrances Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto">
+        {/* Fragrances Grid - 5 columns on large screens */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {fragrances.map((fragrance, index) => (
             <FragranceCard
               key={fragrance.name}
               {...fragrance}
-              delay={index * 0.1}
+              delay={index * 0.08}
             />
           ))}
         </div>
