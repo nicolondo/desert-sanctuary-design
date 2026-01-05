@@ -1,23 +1,71 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import FragranceCard from "./FragranceCard";
-import fragranceVol1 from "@/assets/fragrance-vol1.jpg";
-import fragranceVol2 from "@/assets/fragrance-vol2.jpg";
+import fragranceSahara from "@/assets/fragrance-sahara-detail.jpg";
+import fragranceLunar from "@/assets/fragrance-lunar.jpg";
+import fragranceNasim from "@/assets/fragrance-nasim.jpg";
+import fragranceAdhara from "@/assets/fragrance-adhara.jpg";
+import fragranceKaif from "@/assets/fragrance-kaif.jpg";
+import fragranceNoor from "@/assets/fragrance-noor.jpg";
+import fragranceSabah from "@/assets/fragrance-sabah.jpg";
+import fragranceAura from "@/assets/fragrance-aura.jpg";
 
 const fragrances = [
   {
-    image: fragranceVol1,
-    name: "Syra del Alba",
+    image: fragranceSahara,
+    name: "Sahara",
     family: "Oriental Amaderado",
-    notes: ["Ámbar", "Sándalo", "Rosa del Desierto"],
+    notes: ["Orquídea", "Madera", "Ámbar Dorado"],
     volume: "Volumen I",
   },
   {
-    image: fragranceVol2,
-    name: "Viento de Medianoche",
-    family: "Oriental Especiado",
-    notes: ["Incienso", "Oud", "Azafrán"],
+    image: fragranceLunar,
+    name: "Lunar",
+    family: "Terroso Mineral",
+    notes: ["Piedra Volcánica", "Vetiver", "Cuero"],
     volume: "Volumen II",
+  },
+  {
+    image: fragranceNasim,
+    name: "Nasim",
+    family: "Oriental Especiado",
+    notes: ["Sándalo", "Madera Antigua", "Ámbar"],
+    volume: "Volumen III",
+  },
+  {
+    image: fragranceAdhara,
+    name: "Adhara",
+    family: "Mineral Equilibrado",
+    notes: ["Roca Negra", "Incienso", "Cedro"],
+    volume: "Volumen IV",
+  },
+  {
+    image: fragranceKaif,
+    name: "Kaif",
+    family: "Cálido Intenso",
+    notes: ["Azafrán", "Rosa Roja", "Oud"],
+    volume: "Volumen V",
+  },
+  {
+    image: fragranceNoor,
+    name: "Noor",
+    family: "Luminoso Vibrante",
+    notes: ["Limón", "Jazmín", "Almizcle"],
+    volume: "Volumen VI",
+  },
+  {
+    image: fragranceSabah,
+    name: "Sabah",
+    family: "Amanecer Suave",
+    notes: ["Arena", "Flor Blanca", "Vainilla"],
+    volume: "Volumen VII",
+  },
+  {
+    image: fragranceAura,
+    name: "Aura",
+    family: "Dulce Etéreo",
+    notes: ["Rosa", "Bergamota", "Musk"],
+    volume: "Volumen VIII",
   },
 ];
 
@@ -43,7 +91,7 @@ const FragrancesSection = () => {
             Las Fragancias
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.1em] text-primary mb-8">
-            Dos Volúmenes
+            Ocho Volúmenes
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Cada fragancia es un artefacto. Una pieza aislada del tiempo, 
@@ -52,12 +100,12 @@ const FragrancesSection = () => {
         </motion.div>
 
         {/* Fragrances Grid */}
-        <div className="grid md:grid-cols-2 gap-16 lg:gap-24 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 max-w-7xl mx-auto">
           {fragrances.map((fragrance, index) => (
             <FragranceCard
               key={fragrance.name}
               {...fragrance}
-              delay={index * 0.2}
+              delay={index * 0.1}
             />
           ))}
         </div>

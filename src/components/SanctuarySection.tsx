@@ -1,6 +1,6 @@
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import desertAbstract from "@/assets/desert-abstract.jpg";
+import lifestyleSabah from "@/assets/lifestyle-sabah.jpg";
 
 const SanctuarySection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -81,7 +81,7 @@ const SanctuarySection = () => {
             <div className="relative aspect-[4/5] overflow-hidden glow-amber">
               <motion.img
                 style={{ y: imageY }}
-                src={desertAbstract}
+                src={lifestyleSabah}
                 alt="Desert sanctuary"
                 className="absolute inset-0 w-full h-[120%] object-cover"
               />
