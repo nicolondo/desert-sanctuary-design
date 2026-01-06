@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import heroImage from "@/assets/hero.jpeg";
 
 const HeroSection = () => {
-  const heroImage = "/hero.jpeg";
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
