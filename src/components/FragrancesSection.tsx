@@ -2,78 +2,79 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import FragranceCard from "./FragranceCard";
 
-// Clean bottle product shots
-import bottleLunar from "@/assets/bottles/lunar.png";
-import bottleNasim from "@/assets/bottles/nasim.png";
-import bottleAdhara from "@/assets/bottles/adhara.png";
-import bottleKaif from "@/assets/bottles/kaif.png";
-import bottleNoor from "@/assets/bottles/noor.png";
-import bottleSabah from "@/assets/bottles/sabah.png";
-import bottleAura from "@/assets/bottles/aura.png";
-import bottleCeleste from "@/assets/bottles/celeste.png";
-import bottleMirza from "@/assets/bottles/mirza.png";
-import bottleOryx from "@/assets/bottles/oryx.png";
-
+// Large bottle images from public folder
 const fragrances = [
   {
-    image: bottleLunar,
-    name: "Lunar",
-    family: "Nocturno Profundo",
-    notes: ["Oud Negro", "Cuero", "Vetiver"],
-  },
-  {
-    image: bottleNasim,
-    name: "Nasim",
-    family: "Oriental Dorado",
-    notes: ["Sándalo", "Ámbar", "Madera Antigua"],
-  },
-  {
-    image: bottleAdhara,
+    image: "/ADHARA (Large).png",
     name: "Adhara",
     family: "Mineral Equilibrado",
     notes: ["Roca", "Incienso", "Cedro"],
   },
   {
-    image: bottleKaif,
-    name: "Kaif",
-    family: "Cálido Intenso",
-    notes: ["Azafrán", "Rosa Roja", "Oud"],
-  },
-  {
-    image: bottleNoor,
-    name: "Noor",
-    family: "Luminoso Vibrante",
-    notes: ["Limón", "Jazmín", "Almizcle"],
-  },
-  {
-    image: bottleSabah,
-    name: "Sabah",
-    family: "Amanecer Puro",
-    notes: ["Flor Blanca", "Algodón", "Vainilla"],
-  },
-  {
-    image: bottleAura,
+    image: "/AURA.png",
     name: "Aura",
     family: "Dulce Etéreo",
     notes: ["Rosa", "Bergamota", "Musk"],
   },
   {
-    image: bottleCeleste,
+    image: "/CELESTE.png",
     name: "Celeste",
     family: "Fresco Acuático",
     notes: ["Ozono", "Menta", "Té Verde"],
   },
   {
-    image: bottleMirza,
+    image: "/KAIF.png",
+    name: "Kaif",
+    family: "Cálido Intenso",
+    notes: ["Azafrán", "Rosa Roja", "Oud"],
+  },
+  {
+    image: "/LUNAR.png",
+    name: "Lunar",
+    family: "Nocturno Profundo",
+    notes: ["Oud Negro", "Cuero", "Vetiver"],
+  },
+  {
+    image: "/MIRZA.png",
     name: "Mirza",
     family: "Especiado Cálido",
     notes: ["Canela", "Cardamomo", "Ámbar"],
   },
   {
-    image: bottleOryx,
+    image: "/NASIM.png",
+    name: "Nasim",
+    family: "Oriental Dorado",
+    notes: ["Sándalo", "Ámbar", "Madera Antigua"],
+  },
+  {
+    image: "/NOOR.png",
+    name: "Noor",
+    family: "Luminoso Vibrante",
+    notes: ["Limón", "Jazmín", "Almizcle"],
+  },
+  {
+    image: "/ORYX.png",
     name: "Oryx",
     family: "Amaderado Noble",
     notes: ["Cuero", "Tabaco", "Sándalo"],
+  },
+  {
+    image: "/SABAH.png",
+    name: "Sabah",
+    family: "Amanecer Puro",
+    notes: ["Flor Blanca", "Algodón", "Vainilla"],
+  },
+  {
+    image: "/SAHARA.png",
+    name: "Sahara",
+    family: "Desértico Dorado",
+    notes: ["Arena", "Ámbar", "Sol"],
+  },
+  {
+    image: "/ZENITH.png",
+    name: "Zenith",
+    family: "Celestial Místico",
+    notes: ["Incienso", "Mirra", "Oud Blanco"],
   },
 ];
 
@@ -107,8 +108,8 @@ const FragrancesSection = () => {
           </p>
         </motion.div>
 
-        {/* Fragrances Grid - 5 columns on large screens */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        {/* Fragrances Grid - 6 columns on large screens for 12 fragrances */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 lg:gap-8 max-w-[1600px] mx-auto">
           {fragrances.map((fragrance, index) => (
             <FragranceCard
               key={fragrance.name}
