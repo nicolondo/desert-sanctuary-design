@@ -21,11 +21,12 @@ const FragranceCard = ({ id, image, name, family, notes, delay = 0 }: FragranceC
     >
       <Link to={`/fragrance/${id}`} className="block">
         {/* Image container - optimized for transparent PNGs */}
-        <div className="relative aspect-square mb-6 overflow-hidden">
+        <div className="relative aspect-square mb-6 overflow-visible">
           <motion.img
             src={image}
             alt={name}
-            className="w-full h-full object-contain scale-135 transition-transform duration-700 group-hover:scale-140"
+            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+            style={{ transform: 'scale(1.35)' }}
           />
           
           {/* Notes reveal on hover */}
