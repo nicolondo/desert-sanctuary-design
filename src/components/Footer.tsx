@@ -67,7 +67,7 @@ const Footer = () => {
             </h4>
             <a 
               href="mailto:info@mataiperfumes.com"
-              className="text-primary hover:text-sand-light transition-colors duration-300 text-sm tracking-wide"
+              className="text-primary hover:text-sand-light transition-colors duration-300 text-sm font-serif tracking-wide"
             >
               info@mataiperfumes.com
             </a>

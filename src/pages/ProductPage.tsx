@@ -111,7 +111,7 @@ const ProductPage = () => {
                 <img
                   src={fragrance.image}
                   alt={fragrance.name}
-                  className="w-full h-full object-contain max-w-sm mx-auto"
+                  className="w-full h-full object-contain max-w-md mx-auto scale-115"
                 />
               </div>
             </motion.div>
