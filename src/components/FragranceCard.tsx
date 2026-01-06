@@ -21,7 +21,7 @@ const FragranceCard = ({ id, image, name, family, notes, delay = 0 }: FragranceC
     >
       <Link to={`/fragrance/${id}`} className="block">
         {/* Image container - optimized for transparent PNGs */}
-        <div className="relative aspect-square mb-6 overflow-visible">
+        <div className="relative aspect-square mb-6">
           <motion.img
             src={image}
             alt={name}
@@ -30,16 +30,18 @@ const FragranceCard = ({ id, image, name, family, notes, delay = 0 }: FragranceC
           />
           
           {/* Notes reveal on hover */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-background/90 to-transparent">
-            <div className="flex flex-wrap gap-1">
-              {notes.map((note, index) => (
-                <span
-                  key={index}
-                  className="text-sand-light/80 text-[10px] tracking-[0.1em] uppercase"
-                >
-                  {note}{index < notes.length - 1 ? " •" : ""}
-                </span>
-              ))}
+          <div className="absolute bottom-0 left-0 right-0 overflow-hidden">
+            <div className="p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-gradient-to-t from-background/90 to-transparent">
+              <div className="flex flex-wrap gap-1">
+                {notes.map((note, index) => (
+                  <span
+                    key={index}
+                    className="text-sand-light/80 text-[10px] tracking-[0.1em] uppercase"
+                  >
+                    {note}{index < notes.length - 1 ? " •" : ""}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
