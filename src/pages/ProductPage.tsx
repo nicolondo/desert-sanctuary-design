@@ -107,7 +107,7 @@ const ProductPage = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="sticky top-32"
             >
-              <div className="aspect-square flex items-center justify-center bg-secondary/20 p-8">
+              <div className="aspect-square flex items-center justify-center p-8">
                 <img
                   src={fragrance.image}
                   alt={fragrance.name}
