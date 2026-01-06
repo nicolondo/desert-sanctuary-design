@@ -1,20 +1,21 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import mataiLogo from "@/assets/matai-logo.png";
 
 const navItems = [
-  { label: "Universo", href: "#universo" },
-  { label: "Fragancias", href: "#fragancias" },
-  { label: "Syras", href: "#syras" },
-  { label: "Ritual", href: "#ritual" },
-  { label: "Journal", href: "#journal" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Universe", href: "/#universo" },
+  { label: "Fragrances", href: "/#fragrances" },
+  { label: "Syras", href: "/#syras" },
+  { label: "Ritual", href: "/#ritual" },
+  { label: "Contact", href: "/#contacto" },
 ];
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,22 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  const handleNavClick = (href: string) => {
+    // If we're on a different page, navigate to home first
+    if (location.pathname !== "/" && href.startsWith("/#")) {
+      return; // Let the Link handle navigation
+    }
+    
+    // If on home page, smooth scroll to section
+    if (href.startsWith("/#")) {
+      const sectionId = href.replace("/#", "");
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <motion.header
@@ -46,19 +63,20 @@ const Navigation = () => {
       <nav className="container mx-auto px-8 lg:px-16">
         <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <motion.a
-            href="#"
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
             className="relative z-10"
           >
-            <img 
-              src={mataiLogo} 
-              alt="MATAI" 
-              className="h-6 lg:h-8 w-auto invert opacity-90 hover:opacity-100 transition-opacity duration-500"
-            />
-          </motion.a>
+            <Link to="/">
+              <img 
+                src={mataiLogo} 
+                alt="MATAI" 
+                className="h-6 lg:h-8 w-auto invert opacity-90 hover:opacity-100 transition-opacity duration-500"
+              />
+            </Link>
+          </motion.div>
 
           {/* Navigation Items */}
           <motion.ul 
@@ -74,9 +92,13 @@ const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
               >
-                <a href={item.href} className="nav-link">
+                <Link 
+                  to={item.href} 
+                  className="nav-link"
+                  onClick={() => handleNavClick(item.href)}
+                >
                   {item.label}
-                </a>
+                </Link>
               </motion.li>
             ))}
           </motion.ul>

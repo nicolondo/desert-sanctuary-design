@@ -2,11 +2,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const floatingTexts = [
-  { text: "Las Syras", delay: 0, x: "-10%", y: "0%" },
-  { text: "son presencias", delay: 0.2, x: "15%", y: "20%" },
-  { text: "invisibles", delay: 0.4, x: "-5%", y: "40%" },
-  { text: "que habitan", delay: 0.6, x: "20%", y: "55%" },
-  { text: "el desierto", delay: 0.8, x: "-15%", y: "70%" },
+  { text: "The Syras", delay: 0, x: "-10%", y: "0%" },
+  { text: "are invisible", delay: 0.2, x: "15%", y: "20%" },
+  { text: "presences", delay: 0.4, x: "-5%", y: "40%" },
+  { text: "that inhabit", delay: 0.6, x: "20%", y: "55%" },
+  { text: "the desert", delay: 0.8, x: "-15%", y: "70%" },
 ];
 
 const SyrasSection = () => {
@@ -34,7 +34,7 @@ const SyrasSection = () => {
           className="mb-24 lg:mb-32"
         >
           <span className="section-title text-xs md:text-sm tracking-[0.4em]">
-            Capítulo I
+            The Origin
           </span>
         </motion.div>
 
@@ -70,7 +70,7 @@ const SyrasSection = () => {
             transition={{ duration: 1, delay: 1.2 }}
             className="absolute top-[15%] right-[5%] lg:right-[15%] text-poetic text-sand/60 text-lg md:text-xl max-w-xs text-right"
           >
-            El viento como guía
+            The wind as guide
           </motion.p>
 
           <motion.p
@@ -79,7 +79,7 @@ const SyrasSection = () => {
             transition={{ duration: 1, delay: 1.5 }}
             className="absolute top-[45%] right-[10%] text-poetic text-sand/50 text-base md:text-lg max-w-xs text-right"
           >
-            una fuerza
+            a force
           </motion.p>
 
           <motion.p
@@ -88,7 +88,7 @@ const SyrasSection = () => {
             transition={{ duration: 1, delay: 1.8 }}
             className="absolute bottom-[20%] right-[5%] lg:right-[20%] text-poetic text-sand/40 text-base md:text-lg max-w-xs text-right"
           >
-            y una memoria
+            and a memory
           </motion.p>
         </div>
 
@@ -100,8 +100,8 @@ const SyrasSection = () => {
           className="mt-24 lg:mt-32 max-w-2xl ml-auto text-right"
         >
           <p className="text-muted-foreground text-sm md:text-base leading-relaxed tracking-wide">
-            Cada fragancia MATAI captura la esencia de estas presencias 
-            etéreas, traduciendo el lenguaje del desierto en un alfabeto olfativo.
+            Each MATAI fragrance captures the essence of these ethereal presences, 
+            translating the language of the desert into an olfactory alphabet.
           </p>
         </motion.div>
       </div>
