@@ -17,7 +17,13 @@ const ProductPage = () => {
   }, [id]);
 
   const handleBackClick = () => {
-    navigate('/#fragrances');
+    navigate('/');
+    setTimeout(() => {
+      const element = document.getElementById('fragrances');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   if (!fragrance) {
