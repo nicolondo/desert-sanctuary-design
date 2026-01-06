@@ -94,9 +94,9 @@ const Footer = () => {
               href="https://www.instagram.com/matai.perfumes"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 block text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="mt-4 hidden lg:block text-muted-foreground hover:text-primary transition-colors duration-300 lg:text-right"
             >
-              <Instagram size={20} />
+              <Instagram size={20} className="lg:ml-auto" />
             </a>
           </motion.div>
         </div>
