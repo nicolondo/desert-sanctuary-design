@@ -8,6 +8,8 @@ import nasimImg from "@/assets/bottles/nasim.png";
 import noorImg from "@/assets/bottles/noor.png";
 import oryxImg from "@/assets/bottles/oryx.png";
 import sabahImg from "@/assets/bottles/sabah.png";
+import saharaImg from "@/assets/bottles/sahara.png";
+import zenithImg from "@/assets/bottles/zenith.png";
 
 export interface Fragrance {
   id: string;
@@ -135,7 +137,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "sahara",
     name: "Sahara",
-    image: "/SAHARA.png",
+    image: saharaImg,
     lifestyleImage: "/creation_2167122475.jpg",
     family: "Amber Oriental",
     description: "Warm, dry, and enveloping. Sahara captures the immensity of sun-heated sand and the stillness of endless horizons. A powerful fragrance with a grounded presence and a deep, atmospheric character.",
@@ -146,7 +148,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "zenith",
     name: "Zenith",
-    image: "/ZENITH.png",
+    image: zenithImg,
     lifestyleImage: "/creation_2169386069.jpg",
     family: "Fruity Floral",
     description: "Radiant and expansive, Zenith represents the peak moment when light is at its strongest. Bright yet controlled, it balances intensity with clarity, projecting strength, elevation, and quiet confidence.",
