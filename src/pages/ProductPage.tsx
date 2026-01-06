@@ -17,7 +17,7 @@ const ProductPage = () => {
   }, [id]);
 
   const handleBackClick = () => {
-    navigate(-1);
+    navigate('/#fragrances');
   };
 
   if (!fragrance) {
