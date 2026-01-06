@@ -107,11 +107,11 @@ const ProductPage = () => {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="sticky top-32"
             >
-              <div className="aspect-square flex items-center justify-center p-8">
+              <div className="aspect-square flex items-center justify-center p-4">
                 <img
                   src={fragrance.image}
                   alt={fragrance.name}
-                  className="w-full h-full object-contain max-w-md mx-auto scale-115"
+                  className="w-full h-full object-contain max-w-lg mx-auto scale-125"
                 />
               </div>
             </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import mataiLogo from "@/assets/matai-logo.png";
 
 const footerLinks = [
@@ -9,6 +9,23 @@ const footerLinks = [
 ];
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault();
+    
+    if (location.pathname !== "/") {
+      navigate(href);
+    } else if (href.startsWith("/#")) {
+      const sectionId = href.replace("/#", "");
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer id="contacto" className="relative py-24 lg:py-32 border-t border-border/30">
       <div className="container mx-auto px-8 lg:px-16">
@@ -43,12 +60,13 @@ const Footer = () => {
             <ul className="space-y-4">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <Link 
-                    to={link.href}
-                    className="nav-link text-xs"
+                  <a 
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="nav-link text-xs cursor-pointer"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
