@@ -11,6 +11,18 @@ import sabahImg from "@/assets/bottles/sabah.png";
 import saharaImg from "@/assets/bottles/sahara.png";
 import zenithImg from "@/assets/bottles/zenith.png";
 
+// Lifestyle images
+import adharaLifestyle from "@/assets/lifestyle/adhara.jpg";
+import auraLifestyle from "@/assets/lifestyle/aura.jpg";
+import celesteLifestyle from "@/assets/lifestyle/celeste.jpg";
+import kaifLifestyle from "@/assets/lifestyle/kaif.jpg";
+import lunarLifestyle from "@/assets/lifestyle/lunar.jpg";
+import mirzaLifestyle from "@/assets/lifestyle/mirza.jpg";
+import nasimLifestyle from "@/assets/lifestyle/nasim.jpg";
+import noorLifestyle from "@/assets/lifestyle/noor.jpg";
+import oryxLifestyle from "@/assets/lifestyle/oryx.jpg";
+import sabahLifestyle from "@/assets/lifestyle/sabah.jpg";
+
 export interface Fragrance {
   id: string;
   name: string;
@@ -28,7 +40,7 @@ export const fragrances: Fragrance[] = [
     id: "adhara",
     name: "Adhara",
     image: adharaImg,
-    lifestyleImage: "/creation_2157678799.jpg",
+    lifestyleImage: adharaLifestyle,
     family: "Gourmand Oriental",
     description: "Luminous and enigmatic. Adhara is inspired by a guiding star in the desert night—radiant yet restrained. It balances clarity with depth, unfolding with a serene brilliance that feels both elevated and intimate, leaving a refined, enduring presence.",
     topNotes: ["Caramel"],
@@ -39,7 +51,7 @@ export const fragrances: Fragrance[] = [
     id: "aura",
     name: "Aura",
     image: auraImg,
-    lifestyleImage: "/creation_2157856028.jpg",
+    lifestyleImage: auraLifestyle,
     family: "Oriental Spicy",
     description: "Soft, enveloping, and expressive. Aura blends warmth with delicacy, creating a smooth and comforting presence around the wearer. Subtle yet distinctive, it feels personal and enduring.",
     topNotes: ["Tangerine Orange", "Bergamot"],
@@ -50,7 +62,7 @@ export const fragrances: Fragrance[] = [
     id: "celeste",
     name: "Celeste",
     image: celesteImg,
-    lifestyleImage: "/creation_2157884148.jpg",
+    lifestyleImage: celesteLifestyle,
     family: "Aromatic Woody",
     description: "Bright and uplifting with an airy elegance. Celeste evokes openness and clarity, balancing freshness with refinement. A fragrance that feels light, expansive, and effortlessly modern.",
     topNotes: ["Lavender", "Bergamot"],
@@ -61,7 +73,7 @@ export const fragrances: Fragrance[] = [
     id: "kaif",
     name: "Kaif",
     image: kaifImg,
-    lifestyleImage: "/creation_2158170883.jpg",
+    lifestyleImage: kaifLifestyle,
     family: "Fruity Floral",
     description: "Sensual and immersive. Kaif is designed to linger, unfolding slowly on the skin and creating a feeling of indulgence and depth. A fragrance of pleasure, presence, and lasting impact.",
     topNotes: ["Cherry", "Strawberry", "Peach", "Apple", "Almond"],
@@ -72,7 +84,7 @@ export const fragrances: Fragrance[] = [
     id: "lunar",
     name: "Lunar",
     image: lunarImg,
-    lifestyleImage: "/creation_2163655286.jpg",
+    lifestyleImage: lunarLifestyle,
     family: "Fresh Citrus",
     description: "Mysterious and introspective. Lunar is shaped by night, silence, and shadow, revealing depth through subtle contrasts. A fragrance that feels intimate, magnetic, and quietly powerful.",
     topNotes: ["Citrus"],
@@ -83,7 +95,7 @@ export const fragrances: Fragrance[] = [
     id: "mirza",
     name: "Mirza",
     image: mirzaImg,
-    lifestyleImage: "/creation_2163734421.jpg",
+    lifestyleImage: mirzaLifestyle,
     family: "Floral Oriental",
     description: "Rich, bold, and charismatic. Mirza expresses authority and refinement, blending warmth with intensity. It leaves a strong, memorable trail—confident, sophisticated, and unmistakably present.",
     topNotes: ["Bergamot", "Passion Fruit"],
@@ -94,7 +106,7 @@ export const fragrances: Fragrance[] = [
     id: "nasim",
     name: "Nasim",
     image: nasimImg,
-    lifestyleImage: "/creation_2163863884.jpg",
+    lifestyleImage: nasimLifestyle,
     family: "Spicy Floral",
     description: "A vibrant and expressive fragrance carried by the wind. Fresh spices open the composition before unfolding into a refined floral heart, grounded by warmth and depth. Nasim is energetic, confident, and full of movement.",
     topNotes: ["Bergamot", "Cardamom", "Cinnamon"],
@@ -105,7 +117,7 @@ export const fragrances: Fragrance[] = [
     id: "noor",
     name: "Noor",
     image: noorImg,
-    lifestyleImage: "/creation_2166557023.jpg",
+    lifestyleImage: noorLifestyle,
     family: "Fruity Floral",
     description: "Inspired by light emerging from darkness. Noor is soft, luminous, and intimate, wrapping the skin in warmth and serenity. A fragrance that glows rather than shines, refined and deeply calming.",
     topNotes: ["Lemon", "Orange", "Bergamot", "Coconut", "Strawberry", "Passion Fruit"],
@@ -116,7 +128,7 @@ export const fragrances: Fragrance[] = [
     id: "oryx",
     name: "Oryx",
     image: oryxImg,
-    lifestyleImage: "/creation_2166709357.jpg",
+    lifestyleImage: oryxLifestyle,
     family: "Fruity Floral",
     description: "Structured, noble, and resilient. Oryx reflects strength shaped by extreme environments, combining elegance with restraint. Its presence is steady and composed, leaving a lasting impression without excess.",
     topNotes: ["Calabrian Mandarin", "Green Apple", "Coconut", "Red Fruits"],
@@ -127,7 +139,7 @@ export const fragrances: Fragrance[] = [
     id: "sabah",
     name: "Sabah",
     image: sabahImg,
-    lifestyleImage: "/creation_2167084128.jpg",
+    lifestyleImage: sabahLifestyle,
     family: "Woody Oriental",
     description: "A fragrance of transition and renewal. Sabah evokes the first light of dawn over the desert—fresh, warm, and awakening. It feels optimistic and radiant, like the quiet promise of a new beginning.",
     topNotes: ["Bergamot", "Rose", "Violet Leaves"],
