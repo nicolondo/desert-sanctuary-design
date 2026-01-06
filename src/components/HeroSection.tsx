@@ -50,7 +50,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-poetic text-sand-light text-lg md:text-xl mb-10"
           >
-            donde el viento susurra memorias
+            where the wind whispers memories
           </motion.p>
 
           {/* Main Statement */}
@@ -60,7 +60,7 @@ const HeroSection = () => {
             transition={{ duration: 1.2, delay: 1.2 }}
             className="font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-[0.12em] text-sand-light mb-4"
           >
-            Nacido del Enigma
+            Born from the Enigma
           </motion.h1>
 
           <motion.p
@@ -69,7 +69,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 1.6 }}
             className="font-serif text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.1em] text-sand mb-14"
           >
-            del Desierto
+            of the Desert
           </motion.p>
 
           {/* Divider */}
@@ -87,7 +87,7 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 2.4 }}
             className="text-muted-foreground text-sm md:text-base uppercase tracking-[0.3em] font-sans"
           >
-            Perfumería de Nicho
+            Niche Perfumery
           </motion.p>
         </motion.div>
       </motion.div>
@@ -101,7 +101,7 @@ const HeroSection = () => {
       >
         <div className="scroll-indicator flex flex-col items-center gap-3">
           <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Explorar
+            Explore
           </span>
           <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
         </div>

@@ -4,23 +4,23 @@ import { useRef } from "react";
 const ritualSteps = [
   {
     number: "01",
-    title: "Silencio",
-    description: "Encuentra un momento de quietud. El ritual comienza con la ausencia de ruido.",
+    title: "Silence",
+    description: "Find a moment of stillness. The ritual begins with the absence of noise.",
   },
   {
     number: "02",
-    title: "Intención",
-    description: "Sostén el frasco. Siente su peso. La fragancia es una extensión de tu presencia.",
+    title: "Intention",
+    description: "Hold the bottle. Feel its weight. The fragrance is an extension of your presence.",
   },
   {
     number: "03",
-    title: "Aplicación",
-    description: "Puntos de pulso. Muñecas, cuello, detrás de las orejas. Donde la sangre canta.",
+    title: "Application",
+    description: "Pulse points. Wrists, neck, behind the ears. Where the blood sings.",
   },
   {
     number: "04",
-    title: "Espera",
-    description: "Deja que la fragancia se funda contigo. No la persigas. Ella te encontrará.",
+    title: "Wait",
+    description: "Let the fragrance merge with you. Don't chase it. It will find you.",
   },
 ];
 
@@ -51,11 +51,11 @@ const RitualSection = () => {
           className="mb-24 lg:mb-32"
         >
           <span className="section-title text-xs md:text-sm tracking-[0.4em] block mb-6">
-            Capítulo III
+            The Experience
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-[0.08em] text-primary max-w-2xl">
-            El Ritual de la
-            <span className="block text-gradient-gold glow-gold">Aplicación</span>
+            The Ritual of
+            <span className="block text-gradient-gold glow-gold">Application</span>
           </h2>
         </motion.div>
 
@@ -102,9 +102,9 @@ const RitualSection = () => {
           className="mt-24 lg:mt-32 max-w-xl mx-auto text-center"
         >
           <p className="text-poetic text-xl md:text-2xl text-sand/80">
-            "La fragancia perfecta es aquella que se vuelve invisible, 
-            fundiéndose con tu propia esencia hasta que nadie sabe 
-            dónde terminas tú y dónde comienza ella."
+            "The perfect fragrance is one that becomes invisible, 
+            merging with your own essence until no one knows 
+            where you end and where it begins."
           </p>
         </motion.blockquote>
       </div>

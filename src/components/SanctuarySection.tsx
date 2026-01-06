@@ -29,12 +29,12 @@ const SanctuarySection = () => {
             className="order-2 lg:order-1"
           >
             <span className="section-title text-xs md:text-sm tracking-[0.4em] block mb-8">
-              Capítulo II
+              The Universe
             </span>
             
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light tracking-[0.06em] text-primary mb-8 leading-tight">
-              El desierto como
-              <span className="block text-gradient-sand">santuario olfativo</span>
+              The desert as an
+              <span className="block text-gradient-sand">olfactory sanctuary</span>
             </h2>
 
             <div className="divider-line mb-10" />
@@ -45,9 +45,9 @@ const SanctuarySection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Donde la tradición se encuentra con la vanguardia. MATAI nace de 
-                la fusión entre el conocimiento ancestral de la perfumería oriental 
-                y una visión contemporánea del lujo.
+                Where tradition meets the avant-garde. MATAI is born from 
+                the fusion between the ancestral knowledge of oriental perfumery 
+                and a contemporary vision of luxury.
               </motion.p>
               
               <motion.p
@@ -55,9 +55,9 @@ const SanctuarySection = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                El desierto no es vacío. Es un lugar de fuerza, introspección 
-                y transformación. Un santuario donde el silencio habla y el 
-                viento escribe historias en la arena.
+                The desert is not empty. It is a place of strength, introspection 
+                and transformation. A sanctuary where silence speaks and the 
+                wind writes stories in the sand.
               </motion.p>
 
               <motion.p
@@ -66,7 +66,7 @@ const SanctuarySection = () => {
                 transition={{ duration: 0.8, delay: 0.7 }}
                 className="text-poetic text-sand/70 text-lg"
               >
-                "La perfumería es identidad líquida"
+                "Perfumery is liquid identity"
               </motion.p>
             </div>
           </motion.div>

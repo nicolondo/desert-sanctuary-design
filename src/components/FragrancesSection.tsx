@@ -1,82 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import FragranceCard from "./FragranceCard";
-
-// Large bottle images from public folder
-const fragrances = [
-  {
-    image: "/ADHARA (Large).png",
-    name: "Adhara",
-    family: "Mineral Equilibrado",
-    notes: ["Roca", "Incienso", "Cedro"],
-  },
-  {
-    image: "/AURA.png",
-    name: "Aura",
-    family: "Dulce Etéreo",
-    notes: ["Rosa", "Bergamota", "Musk"],
-  },
-  {
-    image: "/CELESTE.png",
-    name: "Celeste",
-    family: "Fresco Acuático",
-    notes: ["Ozono", "Menta", "Té Verde"],
-  },
-  {
-    image: "/KAIF.png",
-    name: "Kaif",
-    family: "Cálido Intenso",
-    notes: ["Azafrán", "Rosa Roja", "Oud"],
-  },
-  {
-    image: "/LUNAR.png",
-    name: "Lunar",
-    family: "Nocturno Profundo",
-    notes: ["Oud Negro", "Cuero", "Vetiver"],
-  },
-  {
-    image: "/MIRZA.png",
-    name: "Mirza",
-    family: "Especiado Cálido",
-    notes: ["Canela", "Cardamomo", "Ámbar"],
-  },
-  {
-    image: "/NASIM.png",
-    name: "Nasim",
-    family: "Oriental Dorado",
-    notes: ["Sándalo", "Ámbar", "Madera Antigua"],
-  },
-  {
-    image: "/NOOR.png",
-    name: "Noor",
-    family: "Luminoso Vibrante",
-    notes: ["Limón", "Jazmín", "Almizcle"],
-  },
-  {
-    image: "/ORYX.png",
-    name: "Oryx",
-    family: "Amaderado Noble",
-    notes: ["Cuero", "Tabaco", "Sándalo"],
-  },
-  {
-    image: "/SABAH.png",
-    name: "Sabah",
-    family: "Amanecer Puro",
-    notes: ["Flor Blanca", "Algodón", "Vainilla"],
-  },
-  {
-    image: "/SAHARA.png",
-    name: "Sahara",
-    family: "Desértico Dorado",
-    notes: ["Arena", "Ámbar", "Sol"],
-  },
-  {
-    image: "/ZENITH.png",
-    name: "Zenith",
-    family: "Celestial Místico",
-    notes: ["Incienso", "Mirra", "Oud Blanco"],
-  },
-];
+import { fragrances } from "@/data/fragrances";
 
 const FragrancesSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -84,7 +9,7 @@ const FragrancesSection = () => {
 
   return (
     <section
-      id="fragancias"
+      id="fragrances"
       ref={containerRef}
       className="relative min-h-screen py-32 lg:py-48"
     >
@@ -97,14 +22,14 @@ const FragrancesSection = () => {
           className="text-center mb-24 lg:mb-32"
         >
           <span className="section-title text-xs md:text-sm tracking-[0.4em] block mb-6">
-            Las Fragancias
+            The Fragrances
           </span>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.1em] text-primary mb-8">
-            La Colección
+            The Collection
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Cada fragancia es un artefacto. Una pieza aislada del tiempo, 
-            tratada con la reverencia de un objeto ancestral.
+            Each fragrance is an artifact. An isolated piece of time, 
+            treated with the reverence of an ancestral object.
           </p>
         </motion.div>
 
@@ -113,7 +38,11 @@ const FragrancesSection = () => {
           {fragrances.map((fragrance, index) => (
             <FragranceCard
               key={fragrance.name}
-              {...fragrance}
+              id={fragrance.id}
+              image={fragrance.image}
+              name={fragrance.name}
+              family={fragrance.family}
+              notes={[...fragrance.topNotes.slice(0, 2), ...fragrance.middleNotes.slice(0, 1)]}
               delay={index * 0.08}
             />
           ))}

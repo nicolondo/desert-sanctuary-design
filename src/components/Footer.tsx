@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import mataiLogo from "@/assets/matai-logo.png";
 
 const footerLinks = [
-  { label: "Universo", href: "#universo" },
-  { label: "Fragancias", href: "#fragancias" },
-  { label: "Journal", href: "#journal" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Universe", href: "/#universo" },
+  { label: "Fragrances", href: "/#fragrances" },
+  { label: "Contact", href: "/#contacto" },
 ];
 
 const Footer = () => {
@@ -20,13 +20,15 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img 
-              src={mataiLogo} 
-              alt="MATAI" 
-              className="h-6 w-auto invert opacity-70 mb-6"
-            />
+            <Link to="/">
+              <img 
+                src={mataiLogo} 
+                alt="MATAI" 
+                className="h-6 w-auto invert opacity-70 mb-6"
+              />
+            </Link>
             <p className="text-poetic text-muted-foreground text-sm max-w-xs">
-              Perfumería de nicho nacida del enigma del desierto.
+              Niche perfumery born from the enigma of the desert.
             </p>
           </motion.div>
 
@@ -41,12 +43,12 @@ const Footer = () => {
             <ul className="space-y-4">
               {footerLinks.map((link) => (
                 <li key={link.label}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="nav-link text-xs"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -61,13 +63,13 @@ const Footer = () => {
             className="lg:justify-self-end lg:text-right"
           >
             <h4 className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
-              Contacto
+              Contact
             </h4>
             <a 
-              href="mailto:sanctuary@matai.com"
+              href="mailto:info@mataiperfumes.com"
               className="text-primary hover:text-sand-light transition-colors duration-300 text-sm tracking-wide"
             >
-              sanctuary@matai.com
+              info@mataiperfumes.com
             </a>
           </motion.div>
         </div>
@@ -81,10 +83,10 @@ const Footer = () => {
           className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-xs text-muted-foreground/60 tracking-wide">
-            © 2025 MATAI. Todos los derechos reservados.
+            © 2025 MATAI. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground/40 tracking-wider">
-            Creado en el silencio del desierto
+            Created in the silence of the desert
           </p>
         </motion.div>
       </div>
