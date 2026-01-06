@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Instagram } from "lucide-react";
 import mataiLogo from "@/assets/matai-logo.png";
 
 const footerLinks = [
@@ -88,6 +89,14 @@ const Footer = () => {
               className="text-primary hover:text-sand-light transition-colors duration-300 text-sm font-serif tracking-wide"
             >
               info@mataiperfumes.com
+            </a>
+            <a 
+              href="https://www.instagram.com/matai.perfumes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Instagram size={20} />
             </a>
           </motion.div>
         </div>
