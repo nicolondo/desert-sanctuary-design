@@ -1,3 +1,14 @@
+import adharaImg from "@/assets/bottles/adhara.png";
+import auraImg from "@/assets/bottles/aura.png";
+import celesteImg from "@/assets/bottles/celeste.png";
+import kaifImg from "@/assets/bottles/kaif.png";
+import lunarImg from "@/assets/bottles/lunar.png";
+import mirzaImg from "@/assets/bottles/mirza.png";
+import nasimImg from "@/assets/bottles/nasim.png";
+import noorImg from "@/assets/bottles/noor.png";
+import oryxImg from "@/assets/bottles/oryx.png";
+import sabahImg from "@/assets/bottles/sabah.png";
+
 export interface Fragrance {
   id: string;
   name: string;
@@ -14,7 +25,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "adhara",
     name: "Adhara",
-    image: "/ADHARA (Large).png",
+    image: adharaImg,
     lifestyleImage: "/creation_2157678799.jpg",
     family: "Gourmand Oriental",
     description: "Luminous and enigmatic. Adhara is inspired by a guiding star in the desert night—radiant yet restrained. It balances clarity with depth, unfolding with a serene brilliance that feels both elevated and intimate, leaving a refined, enduring presence.",
@@ -25,7 +36,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "aura",
     name: "Aura",
-    image: "/AURA.png",
+    image: auraImg,
     lifestyleImage: "/creation_2157856028.jpg",
     family: "Oriental Spicy",
     description: "Soft, enveloping, and expressive. Aura blends warmth with delicacy, creating a smooth and comforting presence around the wearer. Subtle yet distinctive, it feels personal and enduring.",
@@ -36,7 +47,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "celeste",
     name: "Celeste",
-    image: "/CELESTE.png",
+    image: celesteImg,
     lifestyleImage: "/creation_2157884148.jpg",
     family: "Aromatic Woody",
     description: "Bright and uplifting with an airy elegance. Celeste evokes openness and clarity, balancing freshness with refinement. A fragrance that feels light, expansive, and effortlessly modern.",
@@ -47,7 +58,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "kaif",
     name: "Kaif",
-    image: "/KAIF.png",
+    image: kaifImg,
     lifestyleImage: "/creation_2158170883.jpg",
     family: "Fruity Floral",
     description: "Sensual and immersive. Kaif is designed to linger, unfolding slowly on the skin and creating a feeling of indulgence and depth. A fragrance of pleasure, presence, and lasting impact.",
@@ -58,7 +69,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "lunar",
     name: "Lunar",
-    image: "/LUNAR.png",
+    image: lunarImg,
     lifestyleImage: "/creation_2163655286.jpg",
     family: "Fresh Citrus",
     description: "Mysterious and introspective. Lunar is shaped by night, silence, and shadow, revealing depth through subtle contrasts. A fragrance that feels intimate, magnetic, and quietly powerful.",
@@ -69,7 +80,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "mirza",
     name: "Mirza",
-    image: "/MIRZA.png",
+    image: mirzaImg,
     lifestyleImage: "/creation_2163734421.jpg",
     family: "Floral Oriental",
     description: "Rich, bold, and charismatic. Mirza expresses authority and refinement, blending warmth with intensity. It leaves a strong, memorable trail—confident, sophisticated, and unmistakably present.",
@@ -80,7 +91,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "nasim",
     name: "Nasim",
-    image: "/NASIM.png",
+    image: nasimImg,
     lifestyleImage: "/creation_2163863884.jpg",
     family: "Spicy Floral",
     description: "A vibrant and expressive fragrance carried by the wind. Fresh spices open the composition before unfolding into a refined floral heart, grounded by warmth and depth. Nasim is energetic, confident, and full of movement.",
@@ -91,7 +102,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "noor",
     name: "Noor",
-    image: "/NOOR.png",
+    image: noorImg,
     lifestyleImage: "/creation_2166557023.jpg",
     family: "Fruity Floral",
     description: "Inspired by light emerging from darkness. Noor is soft, luminous, and intimate, wrapping the skin in warmth and serenity. A fragrance that glows rather than shines, refined and deeply calming.",
@@ -102,7 +113,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "oryx",
     name: "Oryx",
-    image: "/ORYX.png",
+    image: oryxImg,
     lifestyleImage: "/creation_2166709357.jpg",
     family: "Fruity Floral",
     description: "Structured, noble, and resilient. Oryx reflects strength shaped by extreme environments, combining elegance with restraint. Its presence is steady and composed, leaving a lasting impression without excess.",
@@ -113,7 +124,7 @@ export const fragrances: Fragrance[] = [
   {
     id: "sabah",
     name: "Sabah",
-    image: "/SABAH.png",
+    image: sabahImg,
     lifestyleImage: "/creation_2167084128.jpg",
     family: "Woody Oriental",
     description: "A fragrance of transition and renewal. Sabah evokes the first light of dawn over the desert—fresh, warm, and awakening. It feels optimistic and radiant, like the quiet promise of a new beginning.",
