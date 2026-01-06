@@ -25,7 +25,7 @@ const FragranceCard = ({ id, image, name, family, notes, delay = 0 }: FragranceC
           <motion.img
             src={image}
             alt={name}
-            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-contain scale-135 transition-transform duration-700 group-hover:scale-150"
           />
           
           {/* Notes reveal on hover */}
