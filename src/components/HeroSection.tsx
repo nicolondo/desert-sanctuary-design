@@ -48,26 +48,35 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-poetic text-sand-light text-lg md:text-xl mb-10"
+            className="text-poetic text-sand-light/80 text-base md:text-lg mb-8"
           >
             where the wind whispers memories
           </motion.p>
 
-          {/* Main Statement */}
+          {/* Main Statement - Using Inter for cleaner look */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 1.2 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-light tracking-[0.12em] text-sand-light mb-4"
+            className="font-sans text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight uppercase tracking-[0.2em] text-sand-light mb-2"
           >
-            Born from the Enigma
+            Born from
+          </motion.h1>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 1.4 }}
+            className="font-sans text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight uppercase tracking-[0.2em] text-sand-light mb-2"
+          >
+            the Enigma
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.6 }}
-            className="font-serif text-2xl md:text-3xl lg:text-4xl font-light tracking-[0.1em] text-sand mb-14"
+            className="font-sans text-xl md:text-2xl lg:text-3xl font-extralight uppercase tracking-[0.25em] text-sand/70 mb-12"
           >
             of the Desert
           </motion.p>
@@ -85,7 +94,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.4 }}
-            className="text-muted-foreground text-sm md:text-base uppercase tracking-[0.3em] font-sans"
+            className="text-muted-foreground text-xs md:text-sm uppercase tracking-[0.4em] font-sans font-light"
           >
             Niche Perfumery
           </motion.p>
